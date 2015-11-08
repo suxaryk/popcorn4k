@@ -1,0 +1,14 @@
+*.com
+*.class
+*.zip
+*.7zip
+*.rar
+*.log
+*.sql
+*.png
+*.txt
+.idea/*
+
+target/*
+icons/*
+out/*
