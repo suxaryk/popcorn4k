@@ -8,6 +8,7 @@
 *.png
 *.txt
 .idea/*
+*.iml
 
 target/*
 icons/*
