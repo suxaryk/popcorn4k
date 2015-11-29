@@ -29,6 +29,7 @@ tr:first-child {
 		</tr>
 		<c:forEach items="${films}" var="film">
 			<tr>
+			   <td>${film.id}</td>
 				<td>${film.id}</td>
 				<td>${film.title}</td>
 				<td>${film.poster}</td>
