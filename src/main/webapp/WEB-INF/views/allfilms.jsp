@@ -26,13 +26,14 @@ tr:first-child {
 			<td>poster</td>
 			<td>description</td>
 			<td>linkTrailer</td>
+			<td>edit</td>
+			<td>delete</td>
 		</tr>
 		<c:forEach items="${films}" var="film">
 			<tr>
-			   <td>${film.id}</td>
 				<td>${film.id}</td>
 				<td>${film.title}</td>
-				<td>${film.poster}</td>
+				<td><img  src= "data:image/jpeg;bytes,${film.poster}"/></td>
 				<td>${film.description}</td>
 				<td><a href="<c:url value='${film.linkTrailer}' />">link</a></td>
 				<td><a href="<c:url value='/films/edit-${film.id}-film' />">edit</a></td>

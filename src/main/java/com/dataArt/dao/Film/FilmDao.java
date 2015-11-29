@@ -2,7 +2,7 @@ package com.dataArt.dao.Film;
 
 import java.util.List;
 
-import com.dataArt.model.Film;
+import com.dataArt.domain.Film;
 
 public interface FilmDao {
 

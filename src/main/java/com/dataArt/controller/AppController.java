@@ -1,6 +1,6 @@
 package com.dataArt.controller;
 
-import com.dataArt.model.Film;
+import com.dataArt.domain.Film;
 import com.dataArt.service.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

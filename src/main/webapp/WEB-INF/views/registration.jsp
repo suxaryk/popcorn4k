@@ -32,13 +32,17 @@
 
 			<tr>
 				<td><label for="poster">Poster: </label></td>
+
 				<td><form:input path="poster" id="poster" /></td>
 				<td><form:errors path="poster" cssClass="error" /></td>
+				<%--<td><form:input path="" id=""></td>--%>
+				<td><input type="file" name="upload" accept="image/*"></td>
 			</tr>
 
 			<tr>
 				<td><label for="description">Description: </label></td>
-				<td><form:input path="description" id="description" /></td>
+				<td><form:textarea path="description" id="description" /></td>
+				<%--<td><form:input path="description" id="description" /></td>--%>
 				<td><form:errors path="description" cssClass="error" /></td>
 			</tr>
 

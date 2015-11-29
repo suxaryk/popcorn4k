@@ -1,28 +1,31 @@
-package com.dataArt.model;
+package com.dataArt.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
- * Created by suxarina on 11/7/2015.
+ * Created by suxarina on 11/29/2015.
  */
 @Entity
-@Table(name = "hall", schema = "", catalog = "popcorn4k")
-public class Hall {
-    private int hallId;
+@Table(name = "HALL")
+public class Hall implements Serializable {
+
+    private static final long serialVersionUID = 5844409830631065662L;
+    private int id;
     private byte seat;
     private byte row;
 
     @Id
-    @Column(name = "hall_id", nullable = false, insertable = true, updatable = true)
-    public int getHallId() {
-        return hallId;
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    public int getId() {
+        return id;
     }
 
-    public void setHallId(int hallId) {
-        this.hallId = hallId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    @Basic
+
     @Column(name = "seat", nullable = false, insertable = true, updatable = true)
     public byte getSeat() {
         return seat;
@@ -32,7 +35,7 @@ public class Hall {
         this.seat = seat;
     }
 
-    @Basic
+
     @Column(name = "row", nullable = false, insertable = true, updatable = true)
     public byte getRow() {
         return row;
@@ -47,18 +50,18 @@ public class Hall {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Hall that = (Hall) o;
+        Hall hall = (Hall) o;
 
-        if (hallId != that.hallId) return false;
-        if (seat != that.seat) return false;
-        if (row != that.row) return false;
+        if (id != hall.id) return false;
+        if (seat != hall.seat) return false;
+        if (row != hall.row) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = hallId;
+        int result = id;
         result = 31 * result + (int) seat;
         result = 31 * result + (int) row;
         return result;

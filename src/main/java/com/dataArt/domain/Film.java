@@ -1,17 +1,17 @@
-package com.dataArt.model;
+package com.dataArt.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Arrays;
 
 /**
- * Created by suxarina on 11/7/2015.
+ * Created by suxarina on 11/29/2015.
  */
 @Entity
 @Table(name = "FILM")
-public class Film implements Serializable {
-    private static final long serialVersionUID = 9092338275307240063L;
+public class Film implements Serializable{
 
+    private static final long serialVersionUID = 7156234876865000740L;
     private int id;
     private String title;
     private String description;
@@ -19,17 +19,16 @@ public class Film implements Serializable {
     private String linkTrailer;
 
     @Id
-    @Column(name = "film_id", nullable = false, insertable = true, updatable = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
 
-    public void setId(int filmId) {
-        this.id = filmId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    @Basic
+
     @Column(name = "title", nullable = false, insertable = true, updatable = true, length = 100)
     public String getTitle() {
         return title;
@@ -39,7 +38,7 @@ public class Film implements Serializable {
         this.title = title;
     }
 
-    @Basic
+
     @Column(name = "description", nullable = false, insertable = true, updatable = true, length = 65535)
     public String getDescription() {
         return description;
@@ -49,7 +48,6 @@ public class Film implements Serializable {
         this.description = description;
     }
 
-    @Basic
     @Column(name = "poster", nullable = false, insertable = true, updatable = true)
     public byte[] getPoster() {
         return poster;
@@ -59,7 +57,7 @@ public class Film implements Serializable {
         this.poster = poster;
     }
 
-    @Basic
+
     @Column(name = "link_trailer", nullable = false, insertable = true, updatable = true, length = 200)
     public String getLinkTrailer() {
         return linkTrailer;
@@ -74,13 +72,13 @@ public class Film implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Film that = (Film) o;
+        Film film = (Film) o;
 
-        if (id != that.id) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (!Arrays.equals(poster, that.poster)) return false;
-        if (linkTrailer != null ? !linkTrailer.equals(that.linkTrailer) : that.linkTrailer != null) return false;
+        if (id != film.id) return false;
+        if (title != null ? !title.equals(film.title) : film.title != null) return false;
+        if (description != null ? !description.equals(film.description) : film.description != null) return false;
+        if (!Arrays.equals(poster, film.poster)) return false;
+        if (linkTrailer != null ? !linkTrailer.equals(film.linkTrailer) : film.linkTrailer != null) return false;
 
         return true;
     }

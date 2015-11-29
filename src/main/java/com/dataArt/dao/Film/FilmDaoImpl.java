@@ -5,7 +5,7 @@ import java.util.List;
 import com.dataArt.dao.AbstractDao;
 import org.springframework.stereotype.Repository;
 
-import com.dataArt.model.Film;
+import com.dataArt.domain.Film;
 
 @Repository
 public class FilmDaoImpl extends AbstractDao<Integer, Film> implements FilmDao {

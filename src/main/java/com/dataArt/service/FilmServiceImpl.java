@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dataArt.dao.Film.FilmDao;
-import com.dataArt.model.Film;
+import com.dataArt.domain.Film;
 
 @Service("FilmService")
 @Transactional

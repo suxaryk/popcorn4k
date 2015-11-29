@@ -2,7 +2,7 @@ package com.dataArt.service;
 
 import java.util.List;
 
-import com.dataArt.model.Film;
+import com.dataArt.domain.Film;
 
 public interface FilmService {
 	
