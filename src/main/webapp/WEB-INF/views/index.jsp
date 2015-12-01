@@ -9,7 +9,7 @@
 <body>
 Greeting : ${greeting}
 This is a index page.
-<a href="<c:url value='/login' />" >Admin Panel</a>
+<a href="<c:url value='/admin' />" >Admin Panel</a>
 </body>
 </html>
 

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,20 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class AdminLoginController {
 
-	
-//	@RequestMapping(value = { "/", "home"}, method = RequestMethod.GET)
-//    public ModelAndView homePage() {
-//        ModelAndView model = new ModelAndView();
-//        model.setViewName("homePage");
-//        return model;
-//    }
 
-	@RequestMapping(value = { "/"  }, method = RequestMethod.GET)
+	@RequestMapping(value =  "/"  , method = RequestMethod.GET)
 	public String welcomePage(ModelMap model) {
         model.addAttribute("user", getPrincipal());
-		return "welcome";
+		return "index";
 
-	}@RequestMapping(value = { "/home"  }, method = RequestMethod.GET)
+	}
+	@RequestMapping(value =  "/home"  , method = RequestMethod.GET)
 	public String homedPage(ModelMap model) {
         model.addAttribute("user", getPrincipal());
 		return "index";
@@ -64,7 +57,7 @@ public class AdminLoginController {
 		if (auth != null){    
 			new SecurityContextLogoutHandler().logout(request, response, auth);
 		}
-		return "redirect:/login?logout";
+		return "redirect:/?logout";
 	}
 
 	private String getPrincipal(){
