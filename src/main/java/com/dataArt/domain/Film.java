@@ -4,9 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Arrays;
 
-/**
- * Created by suxarina on 11/29/2015.
- */
+
 @Entity
 @Table(name = "FILM")
 public class Film implements Serializable{

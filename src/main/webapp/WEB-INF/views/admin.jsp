@@ -42,6 +42,8 @@ tr:first-child {
 		</c:forEach>
 	</table>
 	<br />
-	<a href="<c:url value='/films/addFilm' />">Add New Film</a>
+	<a href="<c:url value='/films/addFilm' />">Add New Film</a> <br/>
+	<a href="<c:url value="/logout" />">Logout</a>
+
 </body>
 </html>

@@ -66,6 +66,6 @@
 	</form:form>
 	<br />
 	<br /> Go back to
-	<a href="<c:url value='/films' />">List of All films</a>
+	<a href="<c:url value='/admin' />">List of All films</a>
 </body>
 </html>

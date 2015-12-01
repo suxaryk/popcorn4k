@@ -3,9 +3,7 @@ package com.dataArt.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by suxarina on 11/30/2015.
- */
+
 @Entity
 @Table(name = "TICKET")
 public class Ticket implements Serializable{
