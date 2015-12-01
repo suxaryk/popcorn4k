@@ -24,7 +24,7 @@ public class FilmController {
     @Autowired
     MessageSource messageSource;
 
-    @RequestMapping(value = { "/films" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/films",  "/admin" }, method = RequestMethod.GET)
     public String listFilms(ModelMap model) {
         model.addAttribute("films", filmService.findAllFilms());
         return "allfilms";

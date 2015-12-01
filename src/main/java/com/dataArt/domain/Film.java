@@ -14,6 +14,7 @@ public class Film implements Serializable{
     private String title;
     private String description;
     private byte[] poster;
+
     private String linkTrailer;
 
     @Id

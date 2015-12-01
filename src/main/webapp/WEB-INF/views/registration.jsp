@@ -36,7 +36,7 @@
 				<td><form:input path="poster" id="poster" /></td>
 				<td><form:errors path="poster" cssClass="error" /></td>
 				<%--<td><form:input path="" id=""></td>--%>
-				<td><input type="file" name="upload" accept="image/*"></td>
+				<td><input type="file" name="upload" accept="image/*" id="poster"></td>
 			</tr>
 
 			<tr>
@@ -66,6 +66,6 @@
 	</form:form>
 	<br />
 	<br /> Go back to
-	<a href="<c:url value='/admin' />">List of All films</a>
+	<a href="<c:url value='/films' />">List of All films</a>
 </body>
 </html>

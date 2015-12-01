@@ -21,13 +21,14 @@ public class FilmDaoImpl extends AbstractDao<Integer, Film> implements FilmDao {
 
 
 	public void deleteById(int id) {
-		getSession().createSQLQuery("DELETE FROM film WHERE film_id =" + id)
+		getSession().createSQLQuery("DELETE FROM film WHERE id =" + id)
 		.addSynchronizedEntityClass(Film.class)
 		.executeUpdate();
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Film> findAllFilms() {
+//		List<Film> list = getSession().createCriteria(Film.class).list();
 
 		return (List<Film>) getSession().createCriteria(Film.class).list();
 	}
