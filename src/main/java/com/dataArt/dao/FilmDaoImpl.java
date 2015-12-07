@@ -1,8 +1,7 @@
-package com.dataArt.dao.Film;
+package com.dataArt.dao;
 
 import java.util.List;
 
-import com.dataArt.dao.AbstractDao;
 import org.springframework.stereotype.Repository;
 
 import com.dataArt.domain.Film;

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dataArt.dao.Film.FilmDao;
+import com.dataArt.dao.FilmDao;
 import com.dataArt.domain.Film;
 
 @Service("FilmService")

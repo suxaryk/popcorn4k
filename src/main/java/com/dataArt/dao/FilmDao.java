@@ -1,4 +1,4 @@
-package com.dataArt.dao.Film;
+package com.dataArt.dao;
 
 import java.util.List;
 
