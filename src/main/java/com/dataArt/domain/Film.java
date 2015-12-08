@@ -1,21 +1,24 @@
 package com.dataArt.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.Arrays;
 
 
 @Entity
 @Table(name = "FILM")
-public class Film implements Serializable{
+public class Film implements Serializable {
 
     private static final long serialVersionUID = 7156234876865000740L;
     private int id;
     private String title;
     private String description;
-    private byte[] poster;
-
+    private String poster;
     private String linkTrailer;
+
+
 
     @Id
     @Column(name = "id", nullable = false, insertable = true, updatable = true)
@@ -37,7 +40,6 @@ public class Film implements Serializable{
         this.title = title;
     }
 
-
     @Column(name = "description", nullable = false, insertable = true, updatable = true, length = 65535)
     public String getDescription() {
         return description;
@@ -48,14 +50,13 @@ public class Film implements Serializable{
     }
 
     @Column(name = "poster", nullable = false, insertable = true, updatable = true)
-    public byte[] getPoster() {
+    public String getPoster() {
         return poster;
     }
 
-    public void setPoster(byte[] poster) {
+    public void setPoster(String poster) {
         this.poster = poster;
     }
-
 
     @Column(name = "link_trailer", nullable = false, insertable = true, updatable = true, length = 200)
     public String getLinkTrailer() {
@@ -65,6 +66,7 @@ public class Film implements Serializable{
     public void setLinkTrailer(String linkTrailer) {
         this.linkTrailer = linkTrailer;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -76,10 +78,9 @@ public class Film implements Serializable{
         if (id != film.id) return false;
         if (title != null ? !title.equals(film.title) : film.title != null) return false;
         if (description != null ? !description.equals(film.description) : film.description != null) return false;
-        if (!Arrays.equals(poster, film.poster)) return false;
-        if (linkTrailer != null ? !linkTrailer.equals(film.linkTrailer) : film.linkTrailer != null) return false;
+        if (poster != null ? !poster.equals(film.poster) : film.poster != null) return false;
+        return !(linkTrailer != null ? !linkTrailer.equals(film.linkTrailer) : film.linkTrailer != null);
 
-        return true;
     }
 
     @Override
@@ -87,7 +88,7 @@ public class Film implements Serializable{
         int result = id;
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (poster != null ? Arrays.hashCode(poster) : 0);
+        result = 31 * result + (poster != null ? poster.hashCode() : 0);
         result = 31 * result + (linkTrailer != null ? linkTrailer.hashCode() : 0);
         return result;
     }

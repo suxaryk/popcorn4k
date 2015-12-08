@@ -1,6 +1,7 @@
 package com.dataArt.controller;
 
 import com.dataArt.domain.Film;
+import com.dataArt.domain.Utils.Utils;
 import com.dataArt.service.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -22,11 +23,18 @@ public class FilmController {
     FilmService filmService;
 
     @Autowired
+    Utils utils;
+
+
+    @Autowired
     MessageSource messageSource;
+
 
     @RequestMapping(value = { "/films",  "/admin" }, method = RequestMethod.GET)
     public String listFilms(ModelMap model) {
         model.addAttribute("films", filmService.findAllFilms());
+//        model.addAttribute("film.poster", utils.base64Decode());
+
         return "allfilms";
     }
 

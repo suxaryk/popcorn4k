@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 		 pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -22,7 +23,7 @@
 
 	<div class="container">
 		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#menu1">Films</a></li>
+			<li class="active"><a data-toggle="tab" href="#menu1" onclick="decode64()" >Films</a></li>
 			<li><a data-toggle="tab" href="#menu2">Attendance</a></li>
 			<li><a data-toggle="tab" href="#menu3">Orders</a></li>
 
@@ -47,7 +48,7 @@
 						<tr>
 							<td>${film.id}</td>
 							<td>${film.title}</td>
-							<td><img  src= "data:image/gif;charset=utf-8;base64,${film.poster}"/></td>
+							<td><img src="data:image/jpeg;base64,${film.poster}"  width="200" height="250"/></td>
 							<td>${film.description}</td>
 							<td><a href="<c:url value='${film.linkTrailer}' />">link</a></td>
 							<td><a href="<c:url value='/films/edit-${film.id}-film' />" class="btn btn-success btn-sm ">edit</a></td>
@@ -57,6 +58,7 @@
 					</tbody>
 				</table>
 				<a href="<c:url value='/films/addFilm' />" class="btn btn-primary btn-sm" >Add New Film</a> <br/>
+
 			</div>
 
 
@@ -69,6 +71,17 @@
 		</div>
 	</div>
 
+
+
+	<script>
+		function decode64() {
+			var arg = document.getElementById("image").getAttribute("src");
+//			var dec = window.atob(arg);
+//			alert(arg);
+			alert(5);
+//			document.getElementById("image").setAttribute("src", dec);
+		}
+	</script>
 
 
 

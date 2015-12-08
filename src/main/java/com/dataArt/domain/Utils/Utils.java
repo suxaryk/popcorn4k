@@ -1,9 +1,10 @@
 package com.dataArt.domain.Utils;
+import org.springframework.stereotype.Component;
 
-/**
- * Created by suxarina on 11/29/2015.
- */
+@Component
 public class Utils {
+
+
 
 
 }
