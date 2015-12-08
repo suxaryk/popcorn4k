@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <title>Admin - list of films</title>
+</head>
+<body>
+
+<header>
+    Administration Side
+</header>
+<div class="tab-panels_s">
+
+    <ul class="tabs">
+        <li rel="panel15" class="active">Add new film</li>
+    </ul>
+
+    <div id="panel15" class="panel active">
+
+<table>
+    <tr>
+        <td class="first-td">Id</td>
+        <td class="first-td">Title</td>
+        <td class="first-td">Poster</td>
+        <td class="first-td">Description</td>
+        <td class="first-td">LinkTrailer</td>
+        <td class="first-td">Edit</td>
+        <td class="first-td">Delete</td>
+    </tr>
+    <c:forEach items="${films}" var="film">
+        <tr>
+            <td class="border-1px">${film.id}</td>
+            <td class="border-1px">${film.title}</td>
+            <td class="border-1px"><img  src= "data:image/jpeg;bytes,${film.poster}"/></td>
+            <td class="border-1px">${film.description}</td>
+            <td class="border-1px"><a href="<c:url value='${film.linkTrailer}' />">link</a></td>
+            <td class="border-1px"><a href="<c:url value='/films/edit-${film.id}-film' />">edit</a></td>
+            <td class="border-1px"><a href="<c:url value='/films/delete-${film.id}-film' />">delete</a></td>
+        </tr>
+    </c:forEach>
+</table>
+<br />
+<a href="<c:url value='/films/addFilm' />">Add New Film</a>
+</div>
+
+</body>
+</html>

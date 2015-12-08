@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Booking</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <link rel="stylesheet" href="jquery-ui-themes.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+
+</head>
+<body>
+
+
+    <div id="chooser">
+        <form method="post" enctype="multipart/form-data">
+      <div class="choose_it">
+        <label for="cinema">Cinema:</label>
+                <select name="cinema">
+                    <option value="Lublin" label="Lublin"></option>
+                    <option value="Wawa" label="Wawa"></option>
+                </select>
+      </div>
+      <div class="choose_it">
+        <label for="film">Film:</label>
+            <select name="film">
+                <option value="Black Cat" label="Black Cat"></option>
+                <option value="Les Miserables" label="Les Miserables"></option>
+            </select>
+      </div>
+      <div class="choose_it">
+            <label for="Date">Date:</label>
+          <select name="date">
+              <option value="01-01-2016" label="01-01-2016"></option>
+              <option value="15-01-2016" label="15-01-2016"></option>
+          </select>
+      </div>
+      <div class="choose_it">
+        <label for="time">Time:</label>
+            <select name="time">
+                <option value="10:00" label="10:00"></option>
+                <option value="20:00" label="20:00"></option>
+            </select>
+      </div>
+
+        </form>
+    </div>
+
+
+
+
+    <p>Seats</p>
+
+    <div id="hall">
+
+       <div id="seat1" class="seat"></div>
+       <div id="seat2" class="seat"></div>
+       <div id="seat3" class="seat"></div>
+       <div id="seat4" class="seat"></div>
+       <div id="seat5" class="seat"></div>
+       <div id="seat6" class="seat"></div>
+       <div id="seat7" class="seat"></div>
+       <div id="seat8" class="seat"></div>
+       <div id="seat9" class="seat"></div>
+       <div id="seat10" class="seat"></div>
+       <div id="seat11" class="seat"></div>
+       <div id="seat12" class="seat"></div>
+       <div id="seat13" class="seat"></div>
+       <div id="seat14" class="seat"></div>
+       <div id="seat15" class="seat"></div>
+       <div id="seat16" class="seat"></div>
+        <div id="seat17" class="seat"></div>
+        <div id="seat18" class="seat"></div>
+        <div id="seat19" class="seat"></div>
+        <div id="seat20" class="seat"></div>
+        <div id="seat21" class="seat"></div>
+        <div id="seat22" class="seat"></div>
+        <div id="seat23" class="seat"></div>
+        <div id="seat24" class="seat"></div>
+        <div id="seat25" class="seat"></div>
+        <div id="seat26" class="seat"></div>
+        <div id="seat27" class="seat"></div>
+        <div id="seat28" class="seat"></div>
+        <div id="seat29" class="seat"></div>
+        <div id="seat30" class="seat"></div>
+        <div id="seat31" class="seat"></div>
+        <div id="seat32" class="seat"></div>
+        <div id="seat33" class="seat"></div>
+        <div id="seat34" class="seat"></div>
+        <div id="seat35" class="seat"></div>
+        <div id="seat37" class="seat"></div>
+        <div id="seat38" class="seat"></div>
+        <div id="seat39" class="seat"></div>
+        <div id="seat40" class="seat"></div>
+        <div id="seat41" class="seat"></div>
+        <div id="seat42" class="seat"></div>
+        <div id="seat43" class="seat"></div>
+        <div id="seat44" class="seat"></div>
+        <div id="seat45" class="seat"></div>
+        <div id="seat46" class="seat"></div>
+        <div id="seat47" class="seat"></div>
+        <div id="seat48" class="seat"></div>
+        <div id="seat49" class="seat"></div>
+        <div id="seat50" class="seat"></div>
+        <div id="seat51" class="seat"></div>
+        <div id="seat52" class="seat"></div>
+        <div id="seat53" class="seat"></div>
+        <div id="seat54" class="seat"></div>
+        <div id="seat55" class="seat"></div>
+        <div id="seat56" class="seat"></div>
+        <div id="seat57" class="seat"></div>
+        <div id="seat58" class="seat"></div>
+        <div id="seat59" class="seat"></div>
+        <div id="seat60" class="seat"></div>
+        <div id="seat61" class="seat"></div>
+    </div>
+
+    <!--
+   <script>
+     $(document).ready(function() {
+
+        $('.seat').click(function(){
+
+       $('this').switchClass('.seat-wanted');
+    });
+
+});
+
+
+   </script>
+-->
+
+    <div class="user_info">
+
+        <p>User info</p>
+
+        <form>
+
+            <label for="fisrt_name" >First name</label>
+            <input type="text" id="fisrt_name" name="fisrt_name">
+            <label for="lastname"class="placeholder">Last name</label>
+            <input type="lastname" id="lastname" name="lastname">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone">
+            <label for="e-mail">E-mail</label>
+            <input type="text" id="e-mail" name="e-mail">
+            <div id="buttons">
+                <input type="submit" value="Buy">
+                <input type="submit" value="Book">
+            </div>
+        </form>
+
+
+    </div>
+
+
+
+</body>
+</html>

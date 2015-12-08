@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <title>Admin - add film</title>
+</head>
+<body>
+
+<header>
+    Administration Side
+</header>
+
+<div class="tab-panels_s">
+
+    <ul class="tabs">
+        <li rel="panel15" class="active">Add new film</li>
+    </ul>
+
+    <div id="panel15" class="panel active">
+
+        <div class="adder">
+
+        <form:form method="POST" modelAttribute="film">
+            <form:input type="hidden" path="id" id="id" />
+            <table>
+                <tr>
+                    <td class="first-td"><label for="title">Title: </label></td>
+                    <td class="border-1px"><form:input path="title" id="title" /></td>
+                    <td class="border-1px"><form:errors path="title" cssClass="error" /></td>
+                </tr>
+
+                <tr>
+                    <td class="first-td"><label for="poster">Poster: </label></td>
+
+                    <td class="border-1px"><form:input path="poster" id="poster" /></td>
+                    <td class="border-1px"><form:errors path="poster" cssClass="error" /></td>
+                    <%--<td class="border-1px"><form:input path="" id=""></td>--%>
+                    <td class="no-border"><input type="file" name="upload" accept="image/*"></td>
+                </tr>
+
+                <tr>
+                    <td class="first-td"><label for="description">Description: </label></td>
+                    <td class="border-1px"><form:textarea path="description" id="description" /></td>
+                    <%--<td class="border-1px"><form:input path="description" id="description" /></td>--%>
+                    <td class="border-1px"><form:errors path="description" cssClass="error" /></td>
+                </tr>
+
+                <tr>
+                    <td class="first-td"><label for="linkTrailer">LinkTrailer: </label></td>
+                    <td class="border-1px"><form:input path="linkTrailer" id="linkTrailer" /></td>
+                    <td class="border-1px"><form:errors path="linkTrailer" cssClass="error" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="no-border"><c:choose>
+                        <c:when test="${edit}">
+                            <input type="submit" value="Update" />
+                        </c:when>
+                        <c:otherwise>
+                            <input type="submit" value="Register" />
+                        </c:otherwise>
+                    </c:choose></td>
+                </tr>
+            </table>
+        </form:form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
