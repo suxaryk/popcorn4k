@@ -36,7 +36,7 @@
 				<td><form:input path="poster" id="poster" /></td>
 				<td><form:errors path="poster" cssClass="error" /></td>
 				<%--<td><form:input path="" id=""></td>--%>
-				<td><input type="file" name="upload" accept="image/*" id="poster"></td>
+				<td><input type="file" name="file" accept="image/*" id="file"></td>
 			</tr>
 
 			<tr>
