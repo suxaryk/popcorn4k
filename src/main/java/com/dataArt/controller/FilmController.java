@@ -8,8 +8,10 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
@@ -64,7 +66,7 @@ public class FilmController {
 
     @RequestMapping(value = { "/films/edit-{id}-film" }, method = RequestMethod.POST)
     public String updateFilm(@Valid @ModelAttribute Film film, BindingResult result,
-                             ModelMap model, @PathVariable int id, @RequestParam("file") MultipartFile file) {
+                             ModelMap model, @PathVariable int id) {
 
 
         if (result.hasErrors()) {
