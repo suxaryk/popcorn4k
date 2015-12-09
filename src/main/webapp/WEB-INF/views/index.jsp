@@ -16,6 +16,7 @@
     <body>
     <header>
 
+<<<<<<< HEAD
         <div id="marquee">
             <c:forEach items="${films}" var="film">
                 <img src="data:image/jpeg;base64,${film.poster}"  width="200" height="250"/>
@@ -35,6 +36,33 @@
                 moveatleast: 2,
                 savedirection: true,
                 random: false
+=======
+<div id="marquee">
+    <c:forEach items="${films}" var="film">
+        <%--<a href="<c:url value='#' />">--%>
+        <img src="data:image/jpeg;base64,${film.poster}" width="200" height="250"/>
+        <%--</a>--%>
+
+    </c:forEach>
+
+</div>
+
+
+
+<script type="text/javascript">
+marqueeInit({
+
+	uniqueid: 'marquee',
+	inc: 15,
+	mouse: 'cursor driven',
+	moveatleast: 2,
+	savedirection: true,
+	random: false
+
+});
+</script>
+</header>
+>>>>>>> origin/master
 
             });
         </script>
@@ -195,12 +223,16 @@
             });
 
 
+<<<<<<< HEAD
         });
     </script>
     <!--
         Greeting : ${greeting}
         This is a index page.
     -->
+=======
+
+>>>>>>> origin/master
 </body>
 </html>
 
