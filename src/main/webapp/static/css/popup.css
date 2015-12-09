@@ -48,7 +48,7 @@
     right:                  10px;
     text-indent:            -999em;
     overflow:               hidden;
-    background:             url(../close.png) no-repeat;
+    background:             url(http://kursjs.pl/kurs/close.png) no-repeat;
 }
  
 .popup1 .content {

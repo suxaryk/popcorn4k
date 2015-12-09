@@ -1,5 +1,5 @@
 $(function () {
-    $('.link').click(function (e) {
+    $('.mini').click(function (e) {
 
         if (!$('.popup1:visible').length) {
             $('.popup1').fadeIn();
