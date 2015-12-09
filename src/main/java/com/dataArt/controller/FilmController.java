@@ -36,6 +36,12 @@ public class FilmController {
         return "allfilms";
     }
 
+    @RequestMapping(value = {"/filmInfo/{id}"}, method = RequestMethod.GET)
+    public String filmInfo(ModelMap model, @PathVariable int id) {
+        model.addAttribute("film", filmService.findById(id));
+        return "filmInfo";
+    }
+
     @RequestMapping(value = { "/films/addFilm" }, method = RequestMethod.GET)
     public String addFilm(ModelMap model) {
         model.addAttribute("film", new Film());

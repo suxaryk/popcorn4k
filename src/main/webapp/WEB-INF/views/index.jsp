@@ -5,10 +5,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Popcorn4K</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/css/style1.css"/>
-    <link rel="stylesheet" href="static/css/jquery-ui-themes.css">
-    <script type="text/javascript" src="static/js/crawler.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/style1.css"/>
+    <link rel="stylesheet" href="/static/css/jquery-ui-themes.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/crawler.js"></script>
 </head>
 <body>
 <header>
@@ -42,31 +43,12 @@
 <div class="center-block" id="gallery">
     <c:forEach items="${films}" var="film">
         <div class="booking">
-            <a href="<c:url value='#/film_info' />">
+            <a href="<c:url value='/filmInfo/${film.id}' />">
                 <img src="data:image/jpeg;base64,${film.poster}" width="200" height="250"/>
             </a>
-            <a href="<c:url value='#/buy' />"><p class="mini">Buy/Book</p></a>
+            <a href="<c:url value='/buy/${film.id}' />"><p class="mini">Buy/Book</p></a>
         </div>
     </c:forEach>
-
-
-    <%--<div class="booking">--%>
-    <%--<a href="htmlOther/film.html"> <img src="static/pics/img1.jpeg" alt="movie" class="bubbles"--%>
-    <%--title="Wanna see more? Just click!"/></a>--%>
-    <%--<a href="htmlOther/booking.html"><p class="mini">Buy/Book</p></a>--%>
-    <%--</div>--%>
-
-    <%--<div class="booking">--%>
-    <%--<a href="htmlOther/film.html"> <img src="static/pics/img1.jpeg" alt="movie" class="bubbles"--%>
-    <%--title="Wanna see more? Just click!"/></a>--%>
-    <%--<a href="htmlOther/booking.html"><p class="mini">Buy/Book</p></a>--%>
-    <%--</div>--%>
-
-    <%--<div class="booking">--%>
-    <%--<a href="htmlOther/film.html"> <img src="static/pics/img1.jpeg" alt="movie" class="bubbles"--%>
-    <%--title="Wanna see more? Just click!"/></a>--%>
-    <%--<a href="htmlOther/booking.html"><p class="mini">Buy/Book</p></a>--%>
-    <%--</div>--%>
 
 </div>
 
