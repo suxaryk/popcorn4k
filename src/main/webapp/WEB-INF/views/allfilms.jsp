@@ -23,7 +23,7 @@
 
 	<div class="container">
 		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#menu1" onclick="decode64()" >Films</a></li>
+			<li class="active"><a data-toggle="tab" href="#menu1">Films</a></li>
 			<li><a data-toggle="tab" href="#menu2">Attendance</a></li>
 			<li><a data-toggle="tab" href="#menu3">Orders</a></li>
 
@@ -70,19 +70,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-	<script>
-		function decode64() {
-			var arg = document.getElementById("image").getAttribute("src");
-//			var dec = window.atob(arg);
-//			alert(arg);
-			alert(5);
-//			document.getElementById("image").setAttribute("src", dec);
-		}
-	</script>
-
 
 
 

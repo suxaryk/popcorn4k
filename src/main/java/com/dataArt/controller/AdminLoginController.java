@@ -1,5 +1,7 @@
 package com.dataArt.controller;
 
+import com.dataArt.service.FilmService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,11 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class AdminLoginController {
+	@Autowired
+	FilmService filmService;
 
 
 	@RequestMapping(value = { "/", "/home"  } , method = RequestMethod.GET)
 	public String welcomePage(ModelMap model) {
         model.addAttribute("user", getPrincipal());
+		model.addAttribute("films", filmService.findAllFilms());
 		return "index";
 
 	}

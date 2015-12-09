@@ -14,12 +14,13 @@
     <header>
 
 <div id="marquee">
-    <a href="film.html"><img src="static/pics/p1.jpg" /></a>
-<img src="static/pics/p2.jpg" />
-<img src="static/pics/p3.png" />
-<img src="static/pics/p11.jpg" />
-<img src="static/pics/p22.jpg" />
-<img src="static/pics/p33.png" />
+    <c:forEach items="${films}" var="film">
+        <%--<a href="<c:url value='#' />">--%>
+        <img src="data:image/jpeg;base64,${film.poster}" width="200" height="250"/>
+        <%--</a>--%>
+
+    </c:forEach>
+
 </div>
 
 
@@ -147,8 +148,7 @@ $(function() {
 });
 </script>
 
-Greeting : ${greeting}
-This is a index page.
+
 </body>
 </html>
 

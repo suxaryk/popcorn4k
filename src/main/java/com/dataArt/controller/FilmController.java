@@ -31,8 +31,6 @@ public class FilmController {
     @RequestMapping(value = { "/films",  "/admin" }, method = RequestMethod.GET)
     public String listFilms(ModelMap model) {
         model.addAttribute("films", filmService.findAllFilms());
-//        model.addAttribute("film.poster", utils.base64Decode());
-
         return "allfilms";
     }
 
