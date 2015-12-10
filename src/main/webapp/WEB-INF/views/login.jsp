@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Login page</title>
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/login.css" rel="stylesheet">
     <%--<link href="/static/css/bootstrap.min.css" rel="stylesheet">--%>
 
 

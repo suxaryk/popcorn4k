@@ -49,7 +49,6 @@
             <a href="<c:url value='/buy/${film.id}' />"><p class="mini">Buy/Book</p></a>
         </div>
     </c:forEach>
-
 </div>
 
 <script>
@@ -75,7 +74,6 @@
     </ul>
 
     <div id="panel1" class="panel active">
-
         dolore magna aliquyam erat<br/>
     </div>
     <div id="panel2" class="panel">
@@ -94,41 +92,28 @@
 
 <script>
     $(document).ready(function () {
-
         $("#panel").hide();
         $("#login").click(function () {
             $("#panel").slideToggle(500);
         });
-
     });
 </script>
 
 <script>
     $(function () {
-
         $('.tab-panels .tabs li').on('click', function () {
-
             var $panel = $(this).closest('.tab-panels');
-
             $panel.find('.tabs li.active').removeClass('active');
             $(this).addClass('active');
-
-
             var panelToShow = $(this).attr('rel');
-
             $panel.find('.panel.active').slideUp(300, showNextPanel);
-
-
             function showNextPanel() {
                 $(this).removeClass('active');
-
                 $('#' + panelToShow).slideDown(300, function () {
                     $(this).addClass('active');
                 });
             }
         });
-
-
     });
 </script>
 
